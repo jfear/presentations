@@ -1,0 +1,158 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>SRA Update
+(Lab Meeting)</title><link rel=alternate type=application/rss+xml title=RSS href=https://jfear.github.io/presentations/index.xml><link rel=canonical href=https://jfear.github.io/presentations/slides/sra/labmeeting_20190603/><link rel="shortcut icon" type=image/png href=https://jfear.github.io/presentations/apple-touch-icon-precomposed.png><meta name=generator content="Hugo 0.55.6"><meta property=og:title content="SRA Update
+(Lab Meeting)"><meta property=og:type content=article><meta property=og:image content=https://jfear.github.io/slides/sra/labmeeting_20190603/cover.jpg><meta property=og:description content><meta property=og:url content=https://jfear.github.io/presentations/slides/sra/labmeeting_20190603/><meta property=og:site_name content="SRA Update
+(Lab Meeting)"><meta name=twitter:card content=summary_large_image><meta name=twitter:site content=@><link rel=stylesheet type=text/css href=https://jfear.github.io/presentations/css/apron.css></style><link rel=stylesheet type=text/css href=https://jfear.github.io/presentations/css/adirondack.css></style><link rel=stylesheet type=text/css href=https://jfear.github.io/presentations/css/descartes.css></style><style type=text/css>@page{size:1216px 684px;margin:0}</style><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.3.1/css/all.css integrity=sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU crossorigin=anonymous><link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel=stylesheet><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script><script src=https://jfear.github.io/presentations/js/story.js></script></head><body class="ma0 bg-white section-slides page-kind-page is-page-true"><main role=main><textarea id=source>class: title, smokescreen, shelf, no-footer
+background-image: url(cover.png)
+
+# SRA Update (PacBio)
+### June 3, 2019
+
+---
+
+class: col-2
+
+# Adult vs Larval Testis
+&lt;!-- TODO: update counts --&gt;
+
+*Adult*
+* XX testes
+* PacBio RSII
+* 3 Size Fractions
+* XX Reads
+* 4,532 Genes Covered
+* 8,053 Isoforms Covered
+
+*Larval*
+* XX testes
+* PacBio Sequel
+* 2 Size Fractions
+* XX Reads
+* 10,042 Genes Covered
+* 36,642 Isoforms Covered
+
+
+---
+
+class: col-2
+
+# Summary: Gene Classification
+
+*Adult*
+
+| category        | # genes |
+|-----------------|---------|
+| Annotated Genes | 4,477   |
+| Novel Genes     | 55      |
+
+
+*Larval*
+
+| category        | # genes |
+|-----------------|---------|
+| Annotated Genes | 9,166   |
+| Novel Genes     | 876     |
+
+
+---
+
+class: col-2
+
+# Summary: Splice Junction Classification
+
+*Adult*
+
+| category            | # SJs  |
+|---------------------|--------|
+| Known canonical     | 13,013 |
+| Known Non-canonical | 8      |
+| Novel canonical     | 454    |
+| Novel Non-canonical | 229    |
+
+
+*Larval*
+
+| category            | # SJs  |
+|---------------------|--------|
+| Known canonical     | 24,857 |
+| Known Non-canonical | 19     |
+| Novel canonical     | 3,216  |
+| Novel Non-canonical | 1,714  |
+
+
+---
+
+class: col-3, compact
+
+# Summary: Transcript Classification
+
+![sqanti](sqanti.jpg)
+
+
+*Adult*
+
+| category         | # SJs |
+|------------------|-------|
+| FSM              | 5,225 |
+| ISM              | 1,355 |
+| NIC              | 640   |
+| NNC              | 561   |
+| Genic&lt;br&gt;Genomic | 162   |
+| Fusion           | 51    |
+| Antisense        | 22    |
+| Intergenic       | 20    |
+| Genic&lt;br&gt;Intron  | 17    |
+
+
+*Larval*
+
+| category         | # SJs  |
+|------------------|--------|
+| FSM              | 13,359 |
+| ISM              | 12,625 |
+| NIC              | 4,098  |
+| NNC              | 3,373  |
+| Genic&lt;br&gt;Genomic | 1,863  |
+| Fusion           | 407    |
+| Antisense        | 404    |
+| Intergenic       | 293    |
+| Genic&lt;br&gt;Intron  | 220    |
+
+
+.footer[&lt;span style=&#34;font-size: .5em !important&#34; &gt;(FSM) Full Splice Match; (ISM) Incomplete Splice Match; (NIC) Novel in Catalog; (NNC) Novel Not in Catalog -- Manuel et al. 2018. *Genome Research*.&lt;/span&gt;] 
+
+---
+
+class: col-2, compact
+
+# Summary: Distribution of Isoforms Per Gene
+
+*Adult*
+
+![Adult](adult_isoforms_per_gene.png# w-80pct)
+
+
+*Larval*
+
+![Larval](larval_isoforms_per_gene.png# w-80pct)
+
+---
+
+class: col-2, compact
+
+# Examples of Novel Genes
+
+&lt;span style=&#34;font-size: .8em !important;&#34; &gt;2R:89,111 -- 129,538&lt;/span&gt;
+![2R](2R_new1.png# w-70pct)
+
+
+&lt;span style=&#34;font-size: .8em !important;&#34; &gt;3L:25,047,822 -- 25,095,604&lt;/span&gt;
+![3L](3L_new1.png# w-70pct)
+
+
+&lt;span style=&#34;font-size: .8em !important;&#34; &gt;3R:28,771,037 -- 28,773,095&lt;/span&gt;
+![3R](3R_new1.png# w-70pct)
+
+
+</textarea>
+<script type=text/javascript src=https://jfear.github.io/presentations/js/qrcode.js></script><script src=https://jfear.github.io/presentations/js/remark.js></script><script>var slideshow=remark.create({ratio:"16:9",navigation:{scroll:false},countIncrementalSlides:false,slideNumberFormat:'%current%',highlightLanguage:"xaprb",placeholder:"dummy value to end the list without a comma"});$(".remark-slide-content.fit-h1 h1").each(function(i,e){var $e=$(e);var $p=$e.closest('div.remark-slide-container');var needsToggle=!$p.hasClass('remark-visible');if(needsToggle)$p.toggleClass('remark-visible');while(e.scrollHeight>e.clientHeight+1&&$e.css('font-size')!='1px'){$e.css('font-size',(parseInt($e.css('font-size'))-1)+"px");}
+if(needsToggle)$p.toggleClass('remark-visible');});$(function(){if($("body.feature-qrcode:not(.feature-noqrcode)").length){if($(".qrcode").length){new QRCode($(".qrcode")[0],{"useSVG":true,"text":window.location.href.replace(/#\d*$/,"")});}}});</script></main></body></html>
