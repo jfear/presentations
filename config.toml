@@ -1,0 +1,37 @@
+# Site settings
+baseurl = "https://jfear.github.io/presentations/"
+title = "Presentations"
+paginate = 5
+buildFuture = true
+theme = "story"
+
+[[menu.social]]
+  name = "GitHub"
+  title = "fab fa-github-square"
+  url = "https://github.com/jfear/presentations"
+
+[[menu.main]]
+  name = "Talks"
+  title = "Talks"
+  url = "/talks/"
+
+[[menu.main]]
+  name = "Slides"
+  title = "Slides"
+  url = "/slides/"
+
+[[menu.main]]
+  name = "Archives"
+  title = "Archives"
+  url = "/archives/"
+
+[params]
+  author = "Jusin M Fear"
+  classes = []
+
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML", "RSS"]
