@@ -24,21 +24,26 @@ class: col-2
 <!-- TODO: update counts -->
 
 *Adult*
-* XX testes
+* **50** testes
+* **3** Size Fractions
 * PacBio RSII
-* 3 Size Fractions
-* XX Reads
-* 4,532 Genes Covered
-* 8,053 Isoforms Covered
+* **209,637** CCS
+* **4,532** Genes Covered
+    - **46** CCS / Coverged Gene
+* **8,053** Isoforms Covered
+    - **26** CCS / Coverged Isoform
 
 *Larval*
-* XX testes
+* **40** testes
+* **2** Size Fractions
 * PacBio Sequel
-* 2 Size Fractions
-* XX Reads
-* 10,042 Genes Covered
-* 36,642 Isoforms Covered
+* **1,219,163** CCS
+* **10,042** Genes Covered
+    - **121** CCS / Coverged Gene
+* **36,642** Isoforms Covered
+    - **33** CCS / Coverged Isoform
 
+.footer[(CCS) Consensus Reads]
 
 ---
 
@@ -88,11 +93,13 @@ class: col-2
 | Novel Non-canonical | 1,714  |
 
 
+.footer[(SJs) Splice Junctions]
+
 ---
 
 class: col-3, compact
 
-# Summary: Transcript Classification
+# Summary: Transcript Classification <span style="font-size: 50%;">(Based on SJ Comparisons)</span>
 
 ![sqanti](sqanti.jpg)
 
@@ -127,7 +134,7 @@ class: col-3, compact
 | Genic<br>Intron  | 220    |
 
 
-.footer[<span style="font-size: .5em !important" >(FSM) Full Splice Match; (ISM) Incomplete Splice Match; (NIC) Novel in Catalog; (NNC) Novel Not in Catalog -- Manuel et al. 2018. *Genome Research*.</span>] 
+.footer[<span style="font-size: 60% !important" >(FSM) Full Splice Match; (ISM) Incomplete Splice Match; (NIC) Novel in Catalog; (NNC) Novel Not in Catalog -- Manuel et al. 2018. *Genome Research*.</span>] 
 
 ---
 
@@ -137,28 +144,91 @@ class: col-2, compact
 
 *Adult*
 
-![Adult](adult_isoforms_per_gene.png# w-80pct)
+![Adult](adult_isoforms_per_gene.png# w-90pct)
 
 
 *Larval*
 
-![Larval](larval_isoforms_per_gene.png# w-80pct)
+![Larval](larval_isoforms_per_gene.png# w-90pct)
 
 ---
 
 class: col-2, compact
 
-# Examples of Novel Genes
+# Summary: Distribution of TS Length
 
-<span style="font-size: .8em !important;" >2R:89,111 -- 129,538</span>
-![2R](2R_new1.png# w-70pct)
+*Adult*
 
-
-<span style="font-size: .8em !important;" >3L:25,047,822 -- 25,095,604</span>
-![3L](3L_new1.png# w-70pct)
+![Adult](adult_ts_length.png# w-90pct)
 
 
-<span style="font-size: .8em !important;" >3R:28,771,037 -- 28,773,095</span>
-![3R](3R_new1.png# w-70pct)
+*Larval*
+
+![Larval](larval_ts_length.png# w-90pct)
+
+.footer[<span style="font-size: 50% !important" >(FSM) Full Splice Match; (ISM) Incomplete Splice Match; (NIC) Novel in Catalog; (NNC) Novel Not in Catalog</span>] 
+---
+
+class: col-2, compact
+
+# Summary: Splice Junction Classification
+
+*Adult*
+
+![Adult](adult_splice_junctions.png# w-90pct)
 
 
+*Larval*
+
+![Larval](larval_splice_junctions.png# w-90pct)
+
+---
+
+class: col-2, compact
+
+# Summary: Coding Genes by TS Class <span style="font-size: 50%;">(GMST)</span>
+
+*Adult*
+
+![Adult](adult_coding.png# w-90pct)
+
+
+*Larval*
+
+![Larval](larval_coding.png# w-90pct)
+
+---
+
+class: col-2, compact
+
+# Quality Control: Template Switching
+
+*Adult*
+
+![Adult](adult_template_switch.png# w-90pct)
+
+
+*Larval*
+
+![Larval](larval_template_switch.png# w-90pct)
+
+---
+
+class: img-caption
+
+# 2R:89,111 -- 129,538
+![2R](2R_new1.png)
+
+---
+
+class: img-caption
+
+# 3L:25,047,822 -- 25,095,604
+![3L](3L_new1.png)
+
+---
+
+class: img-caption
+
+# 3R:28,771,037 -- 28,773,095
+![3R](3R_new1.png)
