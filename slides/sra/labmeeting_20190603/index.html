@@ -15,21 +15,26 @@ class: col-2
 &lt;!-- TODO: update counts --&gt;
 
 *Adult*
-* XX testes
+* **50** testes
+* **3** Size Fractions
 * PacBio RSII
-* 3 Size Fractions
-* XX Reads
-* 4,532 Genes Covered
-* 8,053 Isoforms Covered
+* **209,637** CCS
+* **4,532** Genes Covered
+    - **46** CCS / Coverged Gene
+* **8,053** Isoforms Covered
+    - **26** CCS / Coverged Isoform
 
 *Larval*
-* XX testes
+* **40** testes
+* **2** Size Fractions
 * PacBio Sequel
-* 2 Size Fractions
-* XX Reads
-* 10,042 Genes Covered
-* 36,642 Isoforms Covered
+* **1,219,163** CCS
+* **10,042** Genes Covered
+    - **121** CCS / Coverged Gene
+* **36,642** Isoforms Covered
+    - **33** CCS / Coverged Isoform
 
+.footer[(CCS) Consensus Reads]
 
 ---
 
@@ -79,11 +84,13 @@ class: col-2
 | Novel Non-canonical | 1,714  |
 
 
+.footer[(SJs) Splice Junctions]
+
 ---
 
 class: col-3, compact
 
-# Summary: Transcript Classification
+# Summary: Transcript Classification &lt;span style=&#34;font-size: 50%;&#34;&gt;(Based on SJ Comparisons)&lt;/span&gt;
 
 ![sqanti](sqanti.jpg)
 
@@ -118,7 +125,7 @@ class: col-3, compact
 | Genic&lt;br&gt;Intron  | 220    |
 
 
-.footer[&lt;span style=&#34;font-size: .5em !important&#34; &gt;(FSM) Full Splice Match; (ISM) Incomplete Splice Match; (NIC) Novel in Catalog; (NNC) Novel Not in Catalog -- Manuel et al. 2018. *Genome Research*.&lt;/span&gt;] 
+.footer[&lt;span style=&#34;font-size: 60% !important&#34; &gt;(FSM) Full Splice Match; (ISM) Incomplete Splice Match; (NIC) Novel in Catalog; (NNC) Novel Not in Catalog -- Manuel et al. 2018. *Genome Research*.&lt;/span&gt;] 
 
 ---
 
@@ -128,31 +135,94 @@ class: col-2, compact
 
 *Adult*
 
-![Adult](adult_isoforms_per_gene.png# w-80pct)
+![Adult](adult_isoforms_per_gene.png# w-90pct)
 
 
 *Larval*
 
-![Larval](larval_isoforms_per_gene.png# w-80pct)
+![Larval](larval_isoforms_per_gene.png# w-90pct)
 
 ---
 
 class: col-2, compact
 
-# Examples of Novel Genes
+# Summary: Distribution of TS Length
 
-&lt;span style=&#34;font-size: .8em !important;&#34; &gt;2R:89,111 -- 129,538&lt;/span&gt;
-![2R](2R_new1.png# w-70pct)
+*Adult*
 
-
-&lt;span style=&#34;font-size: .8em !important;&#34; &gt;3L:25,047,822 -- 25,095,604&lt;/span&gt;
-![3L](3L_new1.png# w-70pct)
+![Adult](adult_ts_length.png# w-90pct)
 
 
-&lt;span style=&#34;font-size: .8em !important;&#34; &gt;3R:28,771,037 -- 28,773,095&lt;/span&gt;
-![3R](3R_new1.png# w-70pct)
+*Larval*
+
+![Larval](larval_ts_length.png# w-90pct)
+
+.footer[&lt;span style=&#34;font-size: 50% !important&#34; &gt;(FSM) Full Splice Match; (ISM) Incomplete Splice Match; (NIC) Novel in Catalog; (NNC) Novel Not in Catalog&lt;/span&gt;] 
+---
+
+class: col-2, compact
+
+# Summary: Splice Junction Classification
+
+*Adult*
+
+![Adult](adult_splice_junctions.png# w-90pct)
 
 
+*Larval*
+
+![Larval](larval_splice_junctions.png# w-90pct)
+
+---
+
+class: col-2, compact
+
+# Summary: Coding Genes by TS Class &lt;span style=&#34;font-size: 50%;&#34;&gt;(GMST)&lt;/span&gt;
+
+*Adult*
+
+![Adult](adult_coding.png# w-90pct)
+
+
+*Larval*
+
+![Larval](larval_coding.png# w-90pct)
+
+---
+
+class: col-2, compact
+
+# Quality Control: Template Switching
+
+*Adult*
+
+![Adult](adult_template_switch.png# w-90pct)
+
+
+*Larval*
+
+![Larval](larval_template_switch.png# w-90pct)
+
+---
+
+class: img-caption
+
+# 2R:89,111 -- 129,538
+![2R](2R_new1.png)
+
+---
+
+class: img-caption
+
+# 3L:25,047,822 -- 25,095,604
+![3L](3L_new1.png)
+
+---
+
+class: img-caption
+
+# 3R:28,771,037 -- 28,773,095
+![3R](3R_new1.png)
 </textarea>
 <script type=text/javascript src=https://jfear.github.io/presentations/js/qrcode.js></script><script src=https://jfear.github.io/presentations/js/remark.js></script><script>var slideshow=remark.create({ratio:"16:9",navigation:{scroll:false},countIncrementalSlides:false,slideNumberFormat:'%current%',highlightLanguage:"xaprb",placeholder:"dummy value to end the list without a comma"});$(".remark-slide-content.fit-h1 h1").each(function(i,e){var $e=$(e);var $p=$e.closest('div.remark-slide-container');var needsToggle=!$p.hasClass('remark-visible');if(needsToggle)$p.toggleClass('remark-visible');while(e.scrollHeight>e.clientHeight+1&&$e.css('font-size')!='1px'){$e.css('font-size',(parseInt($e.css('font-size'))-1)+"px");}
 if(needsToggle)$p.toggleClass('remark-visible');});$(function(){if($("body.feature-qrcode:not(.feature-noqrcode)").length){if($(".qrcode").length){new QRCode($(".qrcode")[0],{"useSVG":true,"text":window.location.href.replace(/#\d*$/,"")});}}});</script></main></body></html>

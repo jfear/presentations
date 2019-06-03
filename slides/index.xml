@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Slides on Presentations</title><link>https://jfear.github.io/presentations/slides/</link><description>Recent content in Slides on Presentations</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 29 May 2019 14:48:00 -0400</lastBuildDate><atom:link href="https://jfear.github.io/presentations/slides/index.xml" rel="self" type="application/rss+xml"/><item><title>SRA Update
 (Lab Meeting)</title><link>https://jfear.github.io/presentations/slides/sra/labmeeting_20190603/</link><pubDate>Wed, 29 May 2019 14:48:00 -0400</pubDate><guid>https://jfear.github.io/presentations/slides/sra/labmeeting_20190603/</guid><description>class: title, smokescreen, shelf, no-footer background-image: url(cover.png)
 SRA Update (PacBio) June 3, 2019 class: col-2
-Adult vs Larval Testis Adult * XX testes * PacBio RSII * 3 Size Fractions * XX Reads * 4,532 Genes Covered * 8,053 Isoforms Covered
-Larval * XX testes * PacBio Sequel * 2 Size Fractions * XX Reads * 10,042 Genes Covered * 36,642 Isoforms Covered
-class: col-2
-Summary: Gene Classification Adult</description></item></channel></rss>
+Adult vs Larval Testis Adult * 50 testes * 3 Size Fractions * PacBio RSII * 209,637 CCS * 4,532 Genes Covered - 46 CCS / Coverged Gene * 8,053 Isoforms Covered - 26 CCS / Coverged Isoform
+Larval * 40 testes * 2 Size Fractions * PacBio Sequel * 1,219,163 CCS * 10,042 Genes Covered - 121 CCS / Coverged Gene * 36,642 Isoforms Covered - 33 CCS / Coverged Isoform</description></item></channel></rss>
