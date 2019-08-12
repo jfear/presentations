@@ -1,6 +1,6 @@
 ---
 title: "SRA Update\n(Lab Meeting)"
-date: "2019-05-29T14:48:00-04:00"
+date: "2019-06-03"
 url: "/slides/sra/labmeeting_20190603/"
 image: "/slides/sra/labmeeting_20190603/cover.jpg"
 description: ""
