@@ -28,6 +28,7 @@ theme = "story"
 [params]
   author = "Jusin M Fear"
   classes = []
+  custom_css = ["css/slides.css"]
 
 [outputs]
   home = ["HTML", "JSON", "RSS"]
