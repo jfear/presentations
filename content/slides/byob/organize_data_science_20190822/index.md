@@ -10,12 +10,12 @@ themes:
 - adirondack
 - descartes
 - slides
+classes:
 - feature-highlight
 - feature-qrcode
 
 ---
-class: title
-background-image: url(cover.jpg)
+class: title, fogscreen
 <!-- slide -->
 
 # Organizing Data Science Projects
@@ -23,13 +23,11 @@ background-image: url(cover.jpg)
 ## .gray[NIH BYOB, 2019-08-22]
 
 ---
-class: compact
-<!-- slide -->
 .myheader[\>About]
 
 ## .center[Justin M Fear]
 
-.fl[
+.fl.db.w-50pct[
 - IRTA Fellow (NIDDK/NIH)
     - <i class="fas fa-dna"></i> Genomics
     - <i class="fas fa-project-diagram"></i> Gene Regulation
@@ -42,77 +40,109 @@ class: compact
 
 ]
 
-.fr[
+.fr.db.w-50pct[
 - Slides are at:
     - <http://talks.geneticsunderground.com>
-
+.qrcode.db.pa-3.w-90pct.ml-4[]
 ]
 
 ---
-class: img-left-full, compact, fit-h1
-<!-- slide -->
+class: title, smokescreen
+background-image: url(organization.jpg)
 
+<!-- ############################ Part 1 ############################ -->
 # Why Project Organization
 
-![](organization.jpg)
+---
+layout: true
+.myheader[\>Reason for project organization\>Your-self]
 
-.bq-shrink[
-> “Science is a self-correcting process. To be accepted, new ideas must
-> survive the most rigorous standards of evidence and scrutiny.”
+---
+![](https://st.depositphotos.com/1695366/1398/v/950/depositphotos_13984142-stock-illustration-cartoon-young-sherlock-holmes.jpg # fl w-50pct)
 
-> -- Carl Sagan 1980
+.absolute.db.w-50pct.l-50pct[
+
+# Find things quickly
+
+## (≤ 10 min)
+
+.ul-space[
+* Find the exact code used to generate result
+* Tweak a plot
+* Jump back into a project picking up where you left off
+]
 ]
 
-## Reproducible research
+---
+![](https://thinkingrecords.files.wordpress.com/2013/09/recordsmanagementgetsautomated1-colour-42.jpeg# absolute ofv w-40pct l-1 t-2-12th)
 
-* Easy to find what was done
-* Main results are reproducible
+.absolute.db.w-50pct.l-50pct[
+# Reuse code
 
-## Better science
+## Automate the boring stuff
 
-* Pull methods from old projects
-* Share code with collaborators and the outside world
+.ul-space[
+* Standardized workflows
+* Modularize code for testing, maintenance, and usability
+* Save brain power for fun tasks
+]
+]
 
-## Team development
+---
+![](https://i.imgflip.com/1ulazs.jpg# fl)
+
+.absolute.db.w-50pct.l-50pct[
+# Share code and results
+
+.ul-space[
+* Quickly show a collaborator what you did
+* Summarize side analyses for archive
+]
+]
+
+---
+![](https://www.orrprotection.com/hs-fs/hub/121714/file-16631311-jpg/images/data_center_smoke.jpg?width=254&name=data_center_smoke.jpg# fl w-40pct)
+
+.absolute.db.w-50pct.l-50pct[
+# Recover from data disasters
+
+.ul-space[
+* Oops we swapped sample names now you need to re-run
+* We forgot to tell you about these addition 10 samples
+* The file we sent you was truncated
+]
+]
 
 ---
 layout: true
-<!-- layout slide -->
-
-.myheader[\>Why Project Organization]
 
 ---
-<!-- slide -->
-.fl.w-50pct[
-<figure>
-<img src="old_duck.png">
-<figcaption><i>Your future-self is tireder, busier, and dumber.</i></figcaption>
-</figure>
-]
+class: img-caption
+![](https://miro.medium.com/max/1838/1*ACoKY0p7DSt4FGcZNjkP2Q.jpeg)
 
-.fr.w-50pct.ul-space[
-## If nothing else, stay organized for your future-self.
-
-* Will you know what you did 6 months from now?
-* When you get an additional sample how long will it take to re-run?
-* Can you easily recover when your collaborator realizes they swapped sample labels?
-* ...
-]
+# Reproducible Research
 
 ---
-layout: true
-<!-- layout slide -->
-.myheader[]
+class: title, smokescreen
+background-image: url(https://summary.org/wp-content/uploads/2018/12/Messy02.jpeg)
 
----
-class: compact
-<!-- slide -->
-.myheader[\>Don't do this]
+<!-- ############################ Part 2 ############################ -->
 
 # Have you seen this?
 
+## Please don't do this
+
+
+---
+layout: true
+.myheader[\>Please don't do this]
+
+---
+class: compact
+
+# Poor uses of file names
+
 .fl.db[
-## File name versioning
 <pre><code class="Shell">
 .
 <mark class="highlight">├── deg_jmf_final_v2.sh</mark>
@@ -130,129 +160,142 @@ class: compact
 </code></pre>
 ]
 
-.fr.db[
-## Commenting and uncommenting
-```bash
-# Run this part first
-# ...
+.fr.db.w-60pct[
+* File names are not great for version control
+> If you name something final, you will always have another version.
+* File names are not great at ordering steps in a workflow
+> Adding or re-ordering steps is confusing at best.
+]
 
-# Run this part second
-# ...
-
-# Run this part next
-...
-```
+.absolute.w-6-12th.pa-3.l-5-12th.t-70pct.ba.bw-3.br-4.bg-white-60pct[
+Make file names descriptive and concise.
 ]
 
 ---
-<!-- slide -->
-.myheader[\>Do this]
-
-# Tools of the trade
-
-.fl.db.w-50pct[
-## Version Control System
-
-<figure>
-<img src="git_log.png">
-<figcaption><i>Git and github are your friends.</i></figcaption>
-</figure>
-
-]
+class: compact
+![](lots_o_files.png# fl db h-8-12th absolute l-1 t-2-12th)
 
 .fr.db.w-50pct[
-## Workflow Managment System
+# Poor uses of folders
 
-<figure>
-<img src="rnaseq.png">
-<figcaption><i>Snakemake changed my life.</i></figcaption>
-</figure>
+* One folder to rule them all
 
+> For small projects you can get by with putting everything in a single
+> folder. But, once you have more than 20 files it is hard to find things.
+> Using search is only useful if you know what you are searching for.
+
+* Too many folders
+
+> As above, once you get more than 20 or so folders is becomes hard to find things.
+]
+
+.absolute.w-6-12th.pa-1.l-5-12th.t-10-12th.ba.bw-3.br-4.bg-white-60pct[
+Make your own folder hierarchy and stick to it.
+]
+
+---
+class: compact
+
+# Poor uses of scripts
+
+.fl.db[
+<pre><code class="Bash">
+# Run this part first
+# bunch of lines of code
+
+# Run this part second
+# bunch of lines of code
+
+# Run this part third
+<mark class="highlight">bunch of lines of code</mark>
+
+# Run this part fourth
+# bunch of lines of code
+</code></pre>
+]
+
+.fr.db.w-60pct[
+* Don't comment and uncomment parts of script
+> Your-future-self will have no clue what was actually run
+* Don't copy and paste from a script
+> Beginners often has scripts with lots of comments describing each step.
+> They the copy and paste from the script onto the command line. Like
+> commenting and uncommenting you may not know exactly what you did.
 ]
 
 ---
 layout: true
-.myheader[\>Project Folder Organization]
 
 ---
-class: smokescreen, roomy
-<!-- slide -->
+class: title, smokescreen
+background-image: url(http://www.freestufffinder.com/wp-content/uploads/2018/08/tina-marie-kondo-folding-method.jpg)
+
+# How to get organized
+
+<!-- ############################ Part 3 ############################ -->
+
+---
+class: img-left-full, compact
+![](git_commit.png)
+
+# Tools of the trade (VCS)
+
+## Version Control Software
+
+* Use VCS such as git
+
+> VCS is like MS Words track changes
+
+* Use the cloud to store to your code
+
+> Github, GitLab, and Bitbucket are common places to store
+> your version controlled code.
+
+> You can make code private or public, and it is available 
+> anywhere with internet.
+
+---
+class: compact
+
+# Tools of the trade (Workflows)
+
+![](rnaseq.png# h-6-12th absolute l-2-12th t-2-12th db)
+
+.absolute.t-8-12th[
+* Orchestrate analysis using workflow software
+    - Galaxy
+    - Make
+    - Snakemake
+]
+
+---
+![](example_folder.png# absolute t-0 l-0 h-100pct)
+
+.fr.db.w-40pct[
 
 # Project Folder Organization
 
 .ul-space[
 * Folder structure is personal preference
 * Folder names are personal preference
-* However, there are **general best practices**
+
+## There are general .red[*best practices*]
+]
 ]
 
 ---
-# 10 Best Practices
+class: compact, fit-h1
+![](example_folder.png# absolute t-0 l-0 h-100pct)
 
-<ol>
-<li>Use the same structure and names across projects</li>
-<li>Keep original data, generated data, and scripts separate</li>
-<li>Use workflows to orchestrate</li>
-<li>Modularize reusable code</li>
-<li>Use a style guide and linters</li>
-<li>Split out configuration for consistency</li>
-<li>Use containers and environments for portability and reproducibility</li>
-<li style="font-size: 1em;">Document as you go</li>
-<li style="font-size: 1.2em;">Document as you go</li>
-<li style="font-size: 1.6em;">Document as you go!</li>
-</ol>
+.fr.db.w-40pct[
+## 1. Use the same folder structure and names across projects
+]
+
 
 ---
 class: compact
 
-# My folder structure
-
-```bash
-# Keep data separate
-├── data -> /home/fearjm/...
-├── lcdb-references -> /home/fearjm/...
-├── output -> /home/fearjm/data/fearjm/...
-# Modularize reuseable code
-├── src/         # Project specific library
-├── lcdb-wf/     # Git Submodule (general workflows)
-├── wrappers/    # Generalized wrappers I can use in other projects
-# Use workflows for orchestration
-├── bulk-rnaseq-wf/
-├── cellranger3-wf/
-├── paper_submission-wf/
-├── scripts/    # top level scripts
-├── Snakefile   # Top level workflow
-```
-
----
-# My folder structure (cont)
-
-```bash
-# Split out configuration
-├── config/
-├── example-wf
-    ├── config
-# Use containers and environments for portability
-├── environment.txt
-├── envs/
-# Document as you go
-├── docs/
-├── notebook/
-```
-
----
-# Use the same folder structure and names across projects
-
-* Your future-self will know where to look
-* If you work in teams then everyone knows where to look
-* No cognitive overhead, just rinse and repeat
-
-![](cookiecutter_medium.png)
-
----
-class: compact
-
-# Keep original data, generated data, and scripts separate
+# 2. Separate original data, generated data, and scripts
 
 ## .red[Not stored in version control]
 
@@ -295,22 +338,317 @@ data # original and external
 ]
 
 ---
-# Use workflows to orchestrate
+.absolute.l-2.w-30pct[
+## 3. Uses workflows to orchestrate
+
+```bash
+./example1-wf
+├── config
+│   ├── config.yaml
+│   └── sampletable.tsv
+├── scripts/
+└── Snakefile
+```
+]
+
+![](snakefile.png# absolute l-40pct t-0 h-100pct)
 
 ---
-# Modularize reusable code
+.absolute.l-2.w-40pct[
+## 4. Modularize reusable code
+
+```bash
+lcdb-wf@56c948d  #submodules
+src/    # project level package
+├── my_project
+│   ├── io.py
+│   ├── plotting.py
+│   └── stats.py
+├── tests/
+│   ├── test_io.py
+│   └── test_stats.py
+└── setup.py
+```
+]
+
+![](modularize.png# absolute l-50pct t-0 w-50pct)
 
 ---
-# Use a style guide and linters
+class: compact
+
+.absolute.l-2.w-40pct[
+
+## 5. Use a style guide and linters
+
+* Consistent style improves readability
+* Just google my language and style guide
+* Linters catch syntax erros and point out style problems.
+    - `flake8   # python`
+    - `lintr    # R`
+
+* Fix ugly code with software
+    - `black   # python`
+    - `styler   # R`
+]
+
+.fr.db.w-50pct[
+<pre><code class="R" style="font-size: .9rem">
+for (i in seq(10)) {
+for (j in seq(100)) {
+if (i == j) {
+print(TRUE)
+} else if (i %% j == 0) {
+print("modulo")
+} else {
+print(FALSE)
+}
+}
+}
+</code></pre>
+
+<pre><code class="R" style="font-size: .9rem">
+for (i in seq(10)) {
+  for (j in seq(100)) {
+    if (i == j) {
+      print(TRUE)
+    } else if (i %% j == 0) {
+      print("modulo")
+    } else {
+      print(FALSE)
+    }
+  }
+}
+</code></pre>
+]
 
 ---
-# Split out configuration for consistency
+class: compact
+# 6. Split out configuration for consistency
+
+.absolute.l-2.w-40pct[
+```bash
+./config   # Project config
+    ├── common.yaml
+    ├── gene_sets.yaml
+    └── colors.yaml
+
+./example1-wf   # Workflow config
+    ├── config
+    │   ├── config.yaml
+    │   └── sampletable.tsv
+
+```
+]
+
+.fr.db.w-50pct[
+## Project config
+
+Contains info that is needed across the project.
+
+* Project name and github url
+* Assembly and Annotation
+* alpha level
+
+## Workflow config
+
+Anything you may tweak in the future.
+
+* Various thresholds
+* Workflow specific references
+* Various Mappings (i.e. file name to title)
+
+]
 
 ---
+class: fit-h1, compact
+# 7. Use containers and environments (portability and reproducibility)
 
-# Use containers and environments for portability and reproducibility
+One of the hardest problems in data science is managing software.
+
+.absolute.l-2.w-40pct[
+```bash
+./environment.yaml  # project env
+
+./envs   # specific tools conda envs
+    ├── deseq2.yaml
+    ├── scrublet.yaml
+    ├── seurat2.yaml
+    └── seurat3.yaml
+
+
+```
+]
+
+.fr.db.w-50pct[
+## Containers (Docker, Singularity)
+
+* Completely reproducible system
+    * Kernel and Software
+
+## Environments (Conda, pipenv)
+
+* Install and manage software versions
+* Different versions of software can be installed in different environments
+
+]
 
 ---
-# Document as you go
+class: title, smokescreen
+background-image: url(https://www.mayerdan.com/assets/img/ring-binders.jpg)
+
+# 8., 9., 10. Documentation
+
+## What is not documented, stays not documented
+
+<!-- ############################ Part 4 ############################ -->
 
 ---
+# What to document (Everything!)
+
+.ul-space[
+* How was the data generated
+* Record all "experiments"
+.red[
+- failed attempts
+- comparing different methods
+]
+* Record the reasoning for any decision points
+* Clearly describe how to get final results
+]
+
+**6 months from now, your future-self will thank you!**
+
+---
+# Where to document (Everywhere!)
+
+.ul-space[
+* Sample/Resource Table
+* README
+* Top of scripts
+* Function/Class Docstrings
+* Code comments (but not too many)
+* Literate Programming (i.e. notebooks)
+* Project Blog
+]
+
+---
+layout: true
+.myheader[\>Where to document]
+
+---
+class: compact
+
+# Sample Table
+
+```bash
+./example1-wf
+    ├── config
+    │   ├── config.yaml
+    │   └── sampletable.tsv
+```
+
+| samplename | orig_filename         | group | wellID | row | col | num_parts | sex | testis | ovary | fatbody | ercc |
+|------------|-----------------------|-------|--------|-----|-----|-----------|-----|--------|-------|---------|------|
+| A1_OCP     | ....A1_OCP_1.fastq.gz | OCP   | A1     | A   | 1   | 25        | f   | 0      | 1     | 0       | A    |
+| A6_TCP     | ....A6_TCP_2.fastq.gz | TCP   | A6     | A   | 6   | 15        | m   | 1      | 0     | 0       | B    |
+
+Add as much information about your samples.
+
+---
+# Top of Scripts
+
+.fl.db.w-50pct[
+.ul-space[
+* Describe what the script does
+* Any major decisions that you made
+* Anything to help you remember
+]
+]
+
+![](script_doc.png# absolute l-6-12th t-0 h-100pct)
+
+---
+# Functions and Classes
+
+.fl.db.w-50pct[
+.ul-space[
+* Any function you will call from another script.
+* Add type hints if it is confusing what goes in.
+* Add examples to clearly show what the function does.
+]
+]
+
+![](modularize.png# absolute l-6-12th t-0 w-50pct)
+
+---
+# Literate Programming
+
+.fl.db.w-50pct[
+```bash
+./notebook
+    ├── 2019-08-01_bulk_deg.Rmd
+    └── 2019-08-10_bulk_ma.ipynb
+
+./docs
+    ├── cell_number_counts.ipynb
+    └── permutation_summary.ipynb
+```
+
+.ul-space[
+* Jupyter Notebooks
+* R Notebooks and Rmarkdown
+]
+]
+
+![](jupyter.png# absolute l-6-12th t-0 w-50pct)
+
+.footer[https://github.com/markusschanta/awesome-jupyter]
+
+---
+# Dedicated Project Blog
+
+.ul-space[
+* Aggregate notebooks
+    - `bookdown  # R`
+    - `jupyter webbook  # python`
+* Various static site generators
+    - Pelican
+    - Nikola
+    - jekyll
+    - **hugo**
+]
+
+![](blog.png# absolute l-6-12th t-0 w-50pct)
+
+---
+# 10 Best Practices
+
+<ol>
+<li>Use the same structure and names across projects</li>
+<li>Separate original data, generated data, and scripts</li>
+<li>Use workflows to orchestrate</li>
+<li>Split out configuration for consistency</li>
+<li>Modularize reusable code</li>
+<li>Use a style guide and linters</li>
+<li>Use containers and environments</li>
+<li style="font-size: 1em;">Document as you go</li>
+<li style="font-size: 1.2em;">Document as you go</li>
+<li style="font-size: 1.6em; font-weigth: bold">Document as you go!</li>
+</ol>
+
+---
+class: title, fogscreen
+background-image: url(http://www.paautism.org/LinkClick.aspx?fileticket=A1L9cYFyoTg%3D&tabid=101&portalid=0&mid=771&language=en-US)
+
+# Resources
+
+---
+layout: true
+
+---
+.myheader[\>Resources]
+* Cookiecutter
+* Github
+* Bitbucket
+* Snakemake
+* Data Science git-flow
