@@ -289,6 +289,9 @@ class: compact, fit-h1
 
 .fr.db.w-40pct[
 ## 1. Use the same folder structure and names across projects
+
+* Everything has its place
+* You can quickly move between projects
 ]
 
 
@@ -303,18 +306,14 @@ class: compact
 ```bash
 ├── data # original and external
 ├── lcdb-references # multi-project
-├── output # generate output
+├── output # generated output
+│   ├── example1-wf
+│   ├── example2-wf 
+│   └── paper_submission-wf
 ```
-
 * Improves mobility
 * Delineates what you generated
 * Allows reuse of common data across projects
-
-.bq-shrink[
-> I work on multiple computers.
-> I store data in a single location and mount the drive remotely.
-> I can do more locally instead of messing with Biowulf.
-]
 
 ]
 
